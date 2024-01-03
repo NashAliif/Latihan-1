@@ -5,7 +5,7 @@ const FormRegister = () => {
   return (
     <form action="">
       <InputForm
-        label="Full Name"
+        label="Fullname"
         type="text"
         name="fullname"
         htmlFor="fullname"
