@@ -4,6 +4,19 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
+    console.log("Constructor");
+  }
+
+  componentDidMount() {
+    console.log("Mounted");
+    this.setState({ count: 1 });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Updated");
+    if (this.state.count === 10) {
+      this.setState({ count: 5 });
+    }
   }
 
   render() {
@@ -16,6 +29,7 @@ class Counter extends React.Component {
         >
           +
         </button>
+        {console.log("Render")}
       </div>
     );
   }
